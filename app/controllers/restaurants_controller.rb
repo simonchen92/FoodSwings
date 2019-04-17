@@ -38,6 +38,12 @@ class RestaurantsController < ProtectedController
     @restaurant.destroy
   end
 
+  # YELP SEARCH
+  def yelp_search
+    location = params.require(:location)
+    render json: HTTParty.get("https://api.yelp.com/v3/businesses/search?term=Restaurants&location=#{location}", :headers => { "Authorization" => "Bearer #{ENV["YELP_API_KEY"]}"})
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
