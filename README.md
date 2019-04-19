@@ -21,9 +21,6 @@
 ## Description
 Food Swings is a restaurant planner for individuals who just can't seem to keep track or remember restaurants they want to try in the future - so this application can do just that for you. You must create login credentials to access this application, but it is an application where you can create, read, update, delete your restaurant of your choosing by passing in the restaurant name, location (general location is fine), telephone number, and the cuisine/specialty of the restaurant. If you are lazy just like me - I have added a bonus feature of using the open source of [Yelp Fusion API](https://www.yelp.com/developers) to search for local restaurants in the area you input and from there you can add it directly to your list of restaurants to try.
 
-## Website Screenshot
-![Imgur](https://i.imgur.com/vYqNMIW.png)
-
 ## Technologies Used
 * Ruby on Rails
 * PostgreSQL
