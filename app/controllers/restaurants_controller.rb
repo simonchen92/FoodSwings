@@ -41,7 +41,7 @@ class RestaurantsController < ProtectedController
   # YELP SEARCH
   def yelp_search
     location = params.require(:search)
-    render json: HTTParty.get("https://api.yelp.com/v3/businesses/search?limit=10&term=Restaurants&location=#{location}", :headers => { "Authorization" => "Bearer #{ENV["YELP_API_KEY"]}"})
+    render json: HTTParty.get("https://api.yelp.com/v3/businesses/search?limit=50&term=Restaurants&location=#{location}", :headers => { "Authorization" => "Bearer #{ENV["YELP_API_KEY"]}"})
   end
 
   private
