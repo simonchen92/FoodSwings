@@ -3,7 +3,7 @@ class RestaurantsController < ProtectedController
 
   # GET /restaurants
   def index
-    @restaurants = current_user.restaurants.all
+    @restaurants = current_user.restaurants.all.order('id DESC')
 
     render json: @restaurants
   end
